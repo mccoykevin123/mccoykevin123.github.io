@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Budget Birdie | Golf Deals</title>
+    <meta name="description" content="The Budget Birdie: Your one-stop shop for affordable, high-quality golf clubs, apparel, and accessories. Perfect for students and beginners.">
+    <title>The Budget Birdie | Affordable Golf Gear</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,23 +13,25 @@
         <h1>The Budget Birdie</h1>
         <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop Deals</a></li>
-                <li><a href="#">Clubs</a></li>
-                <li><a href="#">Apparel</a></li>
-                <li><a href="#">Balls & Accessories</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="deals.html">Shop Deals</a></li>
+                <li><a href="clubs.html">Clubs</a></li>
+                <li><a href="apparel.html">Apparel</a></li>
+                <li><a href="accessories.html">Balls & Accessories</a></li>
+                <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        
         <section class="hero-deal">
             <div class="hero-content">
-                <h2>*Picture of A current deal on the website*</h2>
+                <h2>Featured Deal: Starter Set</h2>
+                <p>Get everything you need to hit the links today!</p>
                 <div class="hero-buttons">
-                    <button type="button">Add To Cart</button>
-                    <a href="#" class="more-info">More Information</a>
+                    <button type="button" class="add-to-cart" onclick="addToCart('Featured Starter Set', 299.99)">Add To Cart - $299.99</button>
+                    <a href="https://www.usga.org/content/usga/home-page/rules-hub.html" target="_blank" class="more-info" style="color: white;">New to Golf? Learn the Rules</a>
                 </div>
             </div>
         </section>
@@ -37,38 +41,61 @@
             <p>Our goal at The Budget Birdie is to get new and existing players the best quality gear and accessories at the best available price!</p>
         </section>
 
-        <section class="best-sellers">
+        
+        <h2 style="text-align: center;">Best Sellers</h2>
+        <section class="product-grid">
             <div class="product-card">
-                <div class="product-placeholder">Best seller #1</div>
-                <button type="button">Add To Cart</button>
+                <img src="https://images.unsplash.com/photo-1592919016381-da03623910fb?q=80&w=300&h=200&auto=format&fit=crop" alt="Dozen Golf Balls">
+                <h3>Recycled Pro V1s</h3>
+                <p>$24.99</p>
+                <button type="button" class="add-to-cart" onclick="addToCart('Recycled Pro V1s', 24.99)">Add To Cart</button>
             </div>
             <div class="product-card">
-                <div class="product-placeholder">Best seller #2</div>
-                <button type="button">Add To Cart</button>
+                <img src="https://images.unsplash.com/photo-1622328766949-623938743178?q=80&w=300&h=200&auto=format&fit=crop" alt="Golf Polo Shirt">
+                <h3>Classic Performance Polo</h3>
+                <p>$19.99</p>
+                <button type="button" class="add-to-cart" onclick="addToCart('Performance Polo', 19.99)">Add To Cart</button>
             </div>
             <div class="product-card">
-                <div class="product-placeholder">Best seller #3</div>
-                <button type="button">Add To Cart</button>
-            </div>
-            <div class="product-card">
-                <div class="product-placeholder">Best seller #4</div>
-                <button type="button">Add To Cart</button>
-            </div>
-            <div class="product-card">
-                <div class="product-placeholder">Best seller #5</div>
-                <button type="button">Add To Cart</button>
+                <img src="https://images.unsplash.com/photo-1587311765239-015386d389a3?q=80&w=300&h=200&auto=format&fit=crop" alt="Golf Putter">
+                <h3>Budget Blade Putter</h3>
+                <p>$39.99</p>
+                <button type="button" class="add-to-cart" onclick="addToCart('Blade Putter', 39.99)">Add To Cart</button>
             </div>
         </section>
     </main>
 
     <footer>
-        <nav aria-label="Footer Navigation">
-            <a href="#">Contact Us</a>
-            <a href="#">FAQ's</a>
-            <a href="#">Policies</a>
-            <a href="#">Socials</a>
-        </nav>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; text-align: left; padding: 20px;">
+            <div id="faqs">
+                <h3>FAQ's</h3>
+                <ul>
+                    <li>Do you ship internationally? Yes!</li>
+                    <li>What is the return policy? 30 days.</li>
+                    <li>Are the clubs new? Both new and used options!</li>
+                </ul>
+            </div>
+
+            <div id="contact">
+                <h3>Contact Us</h3>
+                <form action="#">
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="3"></textarea><br>
+                    <button type="submit" style="background: white; color: #5d8a5d; padding: 5px 10px; border-radius: 5px; margin-top: 5px;">Submit</button>
+                </form>
+            </div>
+
+            <div id="policies">
+                <h3>Policies</h3>
+                <p>Standard data privacy and shipping policies apply. We respect your game and your wallet.</p>
+                <p>Follow us: <a href="https://www.instagram.com" target="_blank" style="color: white;">Instagram</a> | <a href="https://www.twitter.com" target="_blank" style="color: white;">X</a></p>
+            </div>
+        </div>
+        <p style="text-align: center; border-top: 1px solid white; padding-top: 10px;">&copy; 2026 The Budget Birdie | Student Project</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
