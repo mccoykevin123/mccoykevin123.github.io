@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Limited time golf deals on clubs, apparel, and accessories. Save big at The Budget Birdie.">
+    <title>Shop Deals | The Budget Birdie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>The Budget Birdie</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="deals.html">Shop Deals</a></li>
+                <li><a href="clubs.html">Clubs</a></li>
+                <li><a href="apparel.html">Apparel</a></li>
+                <li><a href="accessories.html">Balls & Accessories</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 style="text-align: center; margin-top: 20px;">Hot Deals & Clearance</h2>
+        <p style="text-align: center;">Items updated daily. Grab them before they're gone!</p>
+        
+        <div class="product-grid">
+           
+            <div class="product-card" style="border: 2px solid #cc0000;">
+                <span style="background: #cc0000; color: white; padding: 5px; position: absolute; border-radius: 0 0 5px 0;">SAVE 40%</span>
+                <img src="https://images.unsplash.com/photo-1581014131505-02100827289b?q=80&w=300&h=200&auto=format&fit=crop" alt="Clearance Polo">
+                <h3>Clearance Performance Polo</h3>
+                <p><del>$25.00</del> <strong>$15.00</strong></p>
+                <button class="add-to-cart" onclick="addToCart('Clearance Polo', 15.00)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" style="border: 2px solid #cc0000;">
+                <span style="background: #cc0000; color: white; padding: 5px; position: absolute; border-radius: 0 0 5px 0;">HOT DEAL</span>
+                <img src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?q=80&w=300&h=200&auto=format&fit=crop" alt="Discount Wedge">
+                <h3>Pre-Owned Sand Wedge</h3>
+                <p><del>$60.00</del> <strong>$29.99</strong></p>
+                <button class="add-to-cart" onclick="addToCart('Pre-Owned Wedge', 29.99)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" style="border: 2px solid #cc0000;">
+                <span style="background: #cc0000; color: white; padding: 5px; position: absolute; border-radius: 0 0 5px 0;">BOGO</span>
+                <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=300&h=200&auto=format&fit=crop" alt="Discount Tees">
+                <h3>2-Pack Bamboo Tees</h3>
+                <p><del>$15.00</del> <strong>$10.00</strong></p>
+                <button class="add-to-cart" onclick="addToCart('2-Pack Bamboo Tees', 10.00)">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p style="text-align: center;">&copy; 2026 The Budget Birdie | Student Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
