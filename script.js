@@ -45,3 +45,26 @@ function clearCart() {
 if (document.getElementById('cart-items')) {
     displayCart();
 }
+// Add this to the bottom of your existing script.js
+function validateCheckout(event) {
+    event.preventDefault(); // Prevents the form from refreshing the page
+    
+    const name = document.getElementById('fname').value;
+    const email = document.getElementById('email').value;
+
+    // Simple validation logic
+    if (name.length < 3) {
+        alert("Please enter a valid full name.");
+        return false;
+    }
+
+    // "Processing" the data
+    alert("Order submitted! Thank you " + name + ". A confirmation was sent to " + email);
+    
+    // Optional: Clears the cart display after the "order" is placed
+    if (typeof clearCart === "function") {
+        clearCart();
+    }
+    
+    return true;
+}
