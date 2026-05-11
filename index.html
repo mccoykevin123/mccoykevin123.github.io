@@ -25,47 +25,41 @@
 
     <main>
         
-        
-        <section class="hero-deal" style="background-color: #5d8a5d; color: white; padding: 60px 20px; text-align: center; min-height: 500px;">
+        <section class="hero-deal">
             <div class="hero-content">
-                <h2 style="margin: 0 0 10px 0; font-size: 2.2rem;">Featured Deal: Starter Set</h2>
-                <!-- Fixed: High-quality Blue/Silver Starter Set -->
-                <img src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?q=80&w=350&auto=format&fit=crop" alt="Blue Golf Club Set" style="width: 240px; height: auto; border-radius: 10px; margin: 15px 0;">
-                <p style="font-size: 1.1rem; margin-bottom: 20px;">Get everything you need to hit the links today!</p>
-                <div class="hero-buttons" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-                    <button type="button" class="add-to-cart" onclick="addToCart('Featured Starter Set', 299.99)" style="background: white; color: #5d8a5d; padding: 12px 25px; border-radius: 5px; font-weight: bold; border: none; cursor: pointer;">Add To Cart - $299.99</button>
-                    <a href="https://www.usga.org/content/usga/home-page/rules-hub.html" target="_blank" style="color: white; font-size: 0.9rem;">New to Golf? Learn the Rules</a>
+                <h2>Featured Deal: Starter Set</h2>
+                
+                <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcTjzboBfGmZ3qU2baFIz5qHA2F-KYKEJ-kSCQFDppwY4SLSq_IaTSauhwUNi9zh7Kd15bygKPK5HB0ZNVQ" alt="Callaway Strata Starter Set" style="width: 250px; border-radius: 10px; margin-bottom: 10px;">
+                <p>Get everything you need to hit the links today!</p>
+                <div class="hero-buttons">
+                    <button type="button" class="add-to-cart" onclick="addToCart('Featured Starter Set', 299.99)">Add To Cart - $299.99</button>
+                    <a href="https://www.usga.org/content/usga/home-page/rules-hub.html" target="_blank" class="more-info" style="color: white;">New to Golf? Learn the Rules</a>
                 </div>
             </div>
         </section>
 
-        <section class="mission" style="padding: 40px 20px; text-align: center;">
+        <section class="mission">
             <h2>Mission Statement</h2>
             <p>Our goal at The Budget Birdie is to get new and existing players the best quality gear and accessories at the best available price!</p>
         </section>
 
+        
         <h2 style="text-align: center;">Best Sellers</h2>
-        <section class="product-grid" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 20px;">
-            
-            
-            <div class="product-card" style="text-align: center; width: 280px;">
-                <img src="https://images.unsplash.com/photo-1592919016381-da03623910fb?q=80&w=300&h=200&auto=format&fit=crop" alt="Callaway Supersoft Golf Balls">
-                <h3>Callaway Supersoft Dozen</h3>
-                <p>$24.99</p>
-                <button type="button" class="add-to-cart" onclick="addToCart('Callaway Supersoft Dozen', 24.99)">Add To Cart</button>
+        <section class="product-grid">
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcR8YEwvOi2GTv0ssjFSSPcBrPq934xyv4RM759ZaMRroLH-Z-zuc2b0Afhkfb6GQ8x_XPLMm2vsxX-zI7s" alt="Callaway Warbird Golf Balls">
+                <h3>Callaway Warbird Dozen</h3>
+                <p>$19.99</p>
+                <button type="button" class="add-to-cart" onclick="addToCart('Warbird Dozen', 19.99)">Add To Cart</button>
             </div>
-
-            
-            <div class="product-card" style="text-align: center; width: 280px;">
-                <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=300&h=200&auto=format&fit=crop" alt="Golf Polo Shirt">
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSw2JGUGcPYIeWJwJDFMTES6AbhPSMAd_dpiKPB4r36XJrOIRFOcIbqK7m4Wr7RYrqpRC2oFYeOfJZq0Kw" alt="Golf Polo Shirt">
                 <h3>Classic Performance Polo</h3>
                 <p>$19.99</p>
                 <button type="button" class="add-to-cart" onclick="addToCart('Performance Polo', 19.99)">Add To Cart</button>
             </div>
-
-            
-            <div class="product-card" style="text-align: center; width: 280px;">
-                <img src="https://images.unsplash.com/photo-1591491640784-3232eb748d4b?q=80&w=300&h=200&auto=format&fit=crop" alt="Golf Putter">
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcTy8b-0Ri11GNMT6LPwrKfzUL7eLYUXTCW1hnVflzWLOOTTbRqyQRGrMvoXrelsAOat-JtrcutA4fj0Pfo" alt="Golf Putter">
                 <h3>Pinemeadow PGX Putter</h3>
                 <p>$45.00</p>
                 <button type="button" class="add-to-cart" onclick="addToCart('PGX Putter', 45.00)">Add To Cart</button>
@@ -83,6 +77,7 @@
                     <li>Are the clubs new? Both new and used options!</li>
                 </ul>
             </div>
+
             <div id="contact">
                 <h3>Contact Us</h3>
                 <form action="#">
@@ -90,11 +85,17 @@
                     <input type="email" id="email" name="email" required><br>
                     <label for="message">Message:</label><br>
                     <textarea id="message" name="message" rows="3"></textarea><br>
-                    <button type="submit" style="background: white; color: #5d8a5d; padding: 5px 10px; border-radius: 5px; margin-top: 5px; border: none; cursor: pointer;">Submit</button>
+                    <button type="submit" style="background: white; color: #5d8a5d; padding: 5px 10px; border-radius: 5px; margin-top: 5px;">Submit</button>
                 </form>
             </div>
+
+            <div id="policies">
+                <h3>Policies</h3>
+                <p>Standard data privacy and shipping policies apply. We respect your game and your wallet.</p>
+                <p>Follow us: <a href="https://www.instagram.com" target="_blank" style="color: white;">Instagram</a> | <a href="https://www.twitter.com" target="_blank" style="color: white;">X</a></p>
+            </div>
         </div>
-        <p style="text-align: center; border-top: 1px solid white; padding-top: 10px; margin-top: 20px;">&copy; 2026 The Budget Birdie | Student Project</p>
+        <p style="text-align: center; border-top: 1px solid white; padding-top: 10px;">&copy; 2026 The Budget Birdie | Student Project</p>
     </footer>
 
     <script src="script.js"></script>
