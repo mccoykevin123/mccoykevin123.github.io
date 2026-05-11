@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Review your golf gear and complete your purchase at The Budget Birdie.">
     <title>Your Cart | The Budget Birdie</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,7 +12,7 @@
 
     <header>
         <h1>The Budget Birdie</h1>
-        <nav>
+        <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="deals.html">Shop Deals</a></li>
@@ -25,11 +27,12 @@
     <main>
         <h2 style="text-align: center; margin-top: 20px;">Your Shopping Cart</h2>
         
-        <table>
+       
+        <table style="width: 80%; margin: auto; border-collapse: collapse;">
             <thead>
                 <tr>
-                    <th>Item Name</th>
-                    <th>Price</th>
+                    <th style="border-bottom: 2px solid #333; padding: 10px;">Item Name</th>
+                    <th style="border-bottom: 2px solid #333; padding: 10px;">Price</th>
                 </tr>
             </thead>
             <tbody id="cart-items">
@@ -37,20 +40,43 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td><strong>Total</strong></td>
-                    <td><strong>$<span id="total-price">0.00</span></strong></td>
+                    <td style="padding: 10px;"><strong>Total</strong></td>
+                    <td style="padding: 10px;"><strong>$<span id="total-price">0.00</span></strong></td>
                 </tr>
             </tfoot>
         </table>
 
         <div style="text-align: center; margin-top: 20px;">
             <button onclick="clearCart()" style="background-color: #cc0000; color: white; padding: 10px; border-radius: 5px; cursor: pointer;">Clear Cart</button>
-            <button onclick="alert('This is a school project. No actual checkout available!')" style="background-color: #5d8a5d; color: white; padding: 10px; border-radius: 5px; cursor: pointer; margin-left: 10px;">Checkout</button>
         </div>
+
+        <hr style="margin: 40px auto; width: 80%;">
+
+        
+        <section style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+            <h3 style="text-align: center;">Checkout Information</h3>
+            <form id="checkoutForm" onsubmit="return validateCheckout(event)">
+                <div style="margin-bottom: 10px;">
+                    <label for="fname">Full Name:</label><br>
+                    <input type="text" id="fname" name="fname" required style="width: 100%;">
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required style="width: 100%;">
+                </div>
+                <button type="submit" style="background-color: #5d8a5d; color: white; padding: 10px; width: 100%; border: none; border-radius: 5px; cursor: pointer;">Place Order</button>
+            </form>
+        </section>
     </main>
 
     <footer>
         <p style="text-align: center;">&copy; 2026 The Budget Birdie | Student Project</p>
+       
+        <div style="text-align: center; font-size: 0.8em;">
+            <a href="https://www.pgatour.com" target="_blank" rel="noopener">PGA Tour</a> | 
+            <a href="https://www.usga.org" target="_blank" rel="noopener">USGA Rules</a> | 
+            <a href="https://www.golfdigest.com" target="_blank" rel="noopener">Golf Digest</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
